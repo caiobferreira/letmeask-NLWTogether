@@ -41,6 +41,11 @@ if (!roomRef.exists()){
   return;
 }
 
+if (roomRef.val().endetAt){
+  alert('Room already closed.');
+  return;
+}
+
 history.push(`rooms/${roomCode}`);
 
 }
